@@ -1,0 +1,33 @@
+package desafio;
+	
+	import java.util.Locale;
+	import java.util.Scanner;
+
+	public class desafiojava {
+
+	private static Scanner sc;
+
+ 	public static void main(String[] args) {
+	// TODO Auto-generated method stub
+		
+	Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner(System.in);
+
+	double soma = 0.0;
+
+	System.out.println("Informe as alturas que deseja inserir");
+	int qtdAltura = sc.nextInt();
+	        
+	double[] vetAltura = new double[qtdAltura] ;
+
+	for (int i = 0; i < qtdAltura; i++) {
+	System.out.println(i + 1 + " altura");
+	vetAltura[i] = sc.nextDouble();
+	soma += vetAltura[i];
+	}
+	double media = soma / qtdAltura;
+	System.out.printf("A média das alturas é: %.2f: ", media);
+	sc.close();
+
+        }
+	}
